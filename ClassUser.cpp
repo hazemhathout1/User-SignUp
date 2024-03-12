@@ -1,11 +1,12 @@
 #include "ClassUser.h"
 
-
+int User::ID=0;
 
 User::User(string name,unsigned int age)
 {
     Name=name;
     Age=age;
+    ID++;
 }
 
 User::~User()
@@ -24,7 +25,7 @@ User* User::set_Age(unsigned int a)
     return this;
 }
 
-/* unsigned int User::get_ID()
+unsigned int User::get_ID()
 {
     return ID;
-} */
+}
