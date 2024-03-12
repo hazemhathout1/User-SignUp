@@ -5,7 +5,7 @@ using namespace std;
 class User
 {
 private:
-    static int ID;
+    int ID;
     string Name;
     unsigned int Age{};
 
@@ -34,6 +34,7 @@ public:
         cout<<"User Name: "<<get_name()<<endl;
         cout<<"User Age: "<<get_age()<<endl;
         cout<<"User ID: "<<get_ID()<<endl;
+        cout<<endl;
     }
     
 

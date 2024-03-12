@@ -1,12 +1,13 @@
 #include "ClassUser.h"
 
-int User::ID=0;
+
 
 User::User(string name,unsigned int age)
 {
+    static int l_id{0};
     Name=name;
     Age=age;
-    ID++;
+    ID=l_id++;
 }
 
 User::~User()
