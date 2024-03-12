@@ -13,13 +13,15 @@ User::~User()
 }
 
 
-void User::set_Name(string n)
+User* User::set_Name(string n)
 {
-    Name=n;
+    this->Name=n;
+    return this;
 }
-void User::set_Age(unsigned int a)
+User* User::set_Age(unsigned int a)
 {
-    Age=a;
+    this->Age=a;
+    return this;
 }
 
 /* unsigned int User::get_ID()

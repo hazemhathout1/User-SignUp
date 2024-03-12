@@ -15,8 +15,8 @@ public:
     ~User();
 
     //setters and getters
-    void set_Name(string n);
-    void set_Age(unsigned int a);
+    User* set_Name(string n);
+    User* set_Age(unsigned int a);
     unsigned int get_ID();
     
 
