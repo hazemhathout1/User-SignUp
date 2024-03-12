@@ -9,19 +9,20 @@ int main(){
     int count{0},id;
     bool found=false;
     vector<User> user;
-    std::string l_Name;
+    string l_Name;
     unsigned int age;
     int option{0};
     while(option!=3)
     {
-    cout<<"\nPlease Enter an Option\n1-Add Record\n2-Fetch Record\n3-Quit\n"<<endl;
+    cout<<"\nPlease Enter an Option\n1-Add Record\n2-Fetch Record\n3-Display All users"<<endl;
+    cout<<"4-Quit"<<endl;
     cout<<"\nEnter Option:";
     cin>>option;
     switch(option)
     {
         case 1:
             cout<<"Please Enter User Name:";
-            cin>>l_Name;
+            getline(cin>>ws,l_Name);
             cout<<"Please Enter User Age:";
             cin>>age;
             user.push_back(User(l_Name,age));
@@ -44,7 +45,12 @@ int main(){
             found=false;
             break;
         case 3:
-            option=3;
+            for(int i{};i<user.size();i++)
+            {
+                user[i].Print_Data();
+            }
+
+        case 4:
             return 0;
     }
     }
