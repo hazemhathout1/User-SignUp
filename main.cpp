@@ -1,9 +1,11 @@
 #include <iostream>
 #include <vector>
+#include <iomanip>
 #include "ClassUser.h"
 #include "constants.h"
 using namespace std;
 
+void Display_Users(vector<User>);
 
 int main(){
     int count{0},id;
@@ -45,13 +47,21 @@ int main(){
             found=false;
             break;
         case 3:
-            for(int i{};i<user.size();i++)
-            {
-                user[i].Print_Data();
-            }
+            Display_Users(user);
 
         case 4:
             return 0;
     }
+    }
+}
+
+
+void Display_Users(vector<User> user)
+{
+    int colw{10};
+    cout<<"ID\tName\t\tAge"<<endl;
+    for(int i{};i<user.size();i++)
+    {
+        cout<<user[i].get_ID()<<"\t"<<user[i].get_name()<<"\t"<<user[i].get_age()<<endl;
     }
 }
