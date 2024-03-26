@@ -5,6 +5,7 @@ using namespace std;
 class User
 {
 private:
+    static int count;
     int ID;
     string Name;
     unsigned int Age{};
@@ -27,6 +28,8 @@ public:
         return Age;
     }
     unsigned int get_ID();
+    friend void decrement_count(User u);
+    int get_count()const;
 
     //member Functions
     void Print_Data()
