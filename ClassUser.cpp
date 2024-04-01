@@ -1,6 +1,6 @@
 #include "ClassUser.h"
 
-int User::count{};
+
 
 User::User(string name,unsigned int age):Name(name),Age(age)
 {
@@ -31,10 +31,6 @@ unsigned int User::get_ID()
     return ID;
 }
 
-int User::get_count()const
-{
-    return count;
-}
 
 void decrement_count(User u)
 {

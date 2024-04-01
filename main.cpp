@@ -4,8 +4,8 @@
 #include "ClassUser.h"
 #include "constants.h"
 using namespace std;
-
-void Display_Users(vector<User>);
+/* 
+void Display_Users(vector<User>); */
 
 int main(){
     int count,id,colw{10},deleted_id;
@@ -47,12 +47,12 @@ int main(){
             found=false;
             break;
         case 3:
-            if(user[0].get_count()==0)
+            if(User::get_count()==0)
             {
-                cout<<"No users Added on the system."<<endl;
+                cout<<"No users Added on the system."<<endl<<endl;
                 break;
             }
-            cout<<"The number of users is:"<<user[0].get_count()<<endl;
+            cout<<"The number of users is:"<<User::get_count()<<endl;
             cout<<"Name"<<setw(15)<<"Age"<<setw(10)<<"ID"<<endl;
             for(int i{};i<user.size();i++)
             {
@@ -60,7 +60,7 @@ int main(){
             }
             break;
         case 4:
-            if(user[0].get_count()==0)
+            if(User::get_count()==0)
             {
                 cout<<"No users Added on the system."<<endl;
                 break;
@@ -95,7 +95,7 @@ int main(){
 }
 
 
-void Display_Users(vector<User> user)
+/* void Display_Users(vector<User> user)
 {
     if(user[0].get_count()==0)
     {
@@ -109,4 +109,4 @@ void Display_Users(vector<User> user)
     {
         cout<<user[i].get_name()<<setw(18-user[i].get_name().size())<<user[i].get_age()<<setw(10)<<user[i].get_ID()<<endl;
     }
-}
+} */
